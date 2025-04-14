@@ -15,6 +15,7 @@ public class FinancialCalculators {
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
 
+//Calculator1
         if (choice == 1) {
             System.out.println("\nMortgage Calculator");
 
@@ -39,6 +40,7 @@ public class FinancialCalculators {
             System.out.printf("Your monthly payment is: $%.2f\n", monthlyPayment);
             System.out.printf("Your total interest paid over the life of the loan is: $%.2f\n", totalInterest);
 
+//Calculator2
         } else if (choice == 2) {
             System.out.println("\nFuture Value Calculator");
 
@@ -60,6 +62,7 @@ public class FinancialCalculators {
             System.out.printf("The future value of your deposit is: $%.2f\n", futureValue);
             System.out.printf("Total interest earned: $%.2f\n", totalInterestEarned);
 
+//Calculator3
         } else if (choice == 3) {
             System.out.println("\nPresent Value of an Ordinary Annuity Calculator");
 
@@ -78,11 +81,9 @@ public class FinancialCalculators {
             double presentValue = monthlyPayout * (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments)) / monthlyInterestRate;
 
             System.out.printf("You would need to invest: $%.2f today.\n", presentValue);
-
+//Error
         } else {
             System.out.println("Invalid choice. Exiting...");
         }
-
-        scanner.close();
     }
 }
